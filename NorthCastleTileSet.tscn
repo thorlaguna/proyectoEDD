@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://northcastle_trail_remix_sheet.png" type="Texture" id=1]
+
+[node name="NorthCastleTileSet" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.16144, 0.540359 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 196, 32, 36 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 78.3522, -42.6885 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 146, 32, 36 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 85.3769, -86.4576 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 96, 32, 36 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( -75.1101, -83.2155 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 246, 32, 36 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 23.7758, -41.0674 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 284, 32, 32 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -22.1548, -39.9867 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 266, 297, 32, 32 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 38.3656, -86.4576 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 232, 259, 32, 36 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( -14.5897, -85.9173 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 232, 309, 32, 36 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 58.3589, -1.62108 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 198, 260, 32, 67 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( -63.2221, -7.56505 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 164, 260, 32, 67 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( -112.395, -9.18613 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 15, 32, 67 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 130.227, -42.6885 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 228, 2, 62, 112 )

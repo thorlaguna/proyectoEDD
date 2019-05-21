@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stage4_Loop.wav-835ac4b12aef3aec5220fc7ae721142c.sample"
+
+[deps]
+
+source_file="res://Music/Sound/OST/Stage4_Loop.wav"
+dest_files=[ "res://.import/Stage4_Loop.wav-835ac4b12aef3aec5220fc7ae721142c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

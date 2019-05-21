@@ -1,0 +1,87 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Game/Enemies/DemonFireScn.gd" type="Script" id=1]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon.png" type="Texture" id=2]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_001.png" type="Texture" id=3]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_002.png" type="Texture" id=4]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_003.png" type="Texture" id=5]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_004.png" type="Texture" id=6]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_005.png" type="Texture" id=7]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_006.png" type="Texture" id=8]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_die_007.png" type="Texture" id=9]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_jump_001.png" type="Texture" id=10]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_jump_002.png" type="Texture" id=11]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_jump_003.png" type="Texture" id=12]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_jump_004.png" type="Texture" id=13]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_001.png" type="Texture" id=14]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_002.png" type="Texture" id=15]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_003.png" type="Texture" id=16]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_004.png" type="Texture" id=17]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_005.png" type="Texture" id=18]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_006.png" type="Texture" id=19]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_007.png" type="Texture" id=20]
+[ext_resource path="res://Game/Enemies/Demon Fire/fire_demon_walk_008.png" type="Texture" id=21]
+[ext_resource path="res://Game/Enemies/Area2D.gd" type="Script" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "dead",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.7805
+height = 16.2044
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.63584, 11.2349 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 0.642563, 0.642563 )
+scale = Vector2( 1.28, 1.32 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.908268, 1.38403 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0732912, -0.423186 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 7.42598, -0.377463 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.143766, -8.64366 )
+scale = Vector2( 1.3695, 0.699604 )
+shape = SubResource( 3 )
+[connection signal="tree_entered" from="." to="." method="_on_KinematicBody2D_tree_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=2]
+[ext_resource path="res://Game/DeadBlockScene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Game/CoinScn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://floortile.tres" type="TileSet" id=6]
+[ext_resource path="res://Game/CompleteWorld.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/Enemies/DemonFireScn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Translations/Label2.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 4 )
+
+[node name="Node" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 25.4848, 475.358 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131072, 0, 196608, -131071, 0, 196609, -131070, 0, 196609, -131069, 0, 196609, -131068, 0, 196609, -131067, 0, 196609, -131066, 0, 196609, -131065, 0, 196609, -131064, 0, 196609, -131063, 0, 196609, -131062, 0, 196609, -131061, 0, 196609, -131060, 0, 196609, -131059, 0, 196609, -131058, 0, 196609, -131057, 0, 196609, -131056, 0, 196609, -131055, 0, 196609, -131054, 0, 196609, -131053, 0, 196609, -131052, 0, 196609, -131051, 0, 196609, -131050, 0, 196609, -131049, 0, 196609, -131048, 0, 196609, -131047, 0, 196609, -131046, 0, 196609, -131045, 0, 196609, -131044, 0, 196609, -131043, 0, 196609, -131042, 0, 7, -65506, 0, 65541, 14, 0, 196613, 22, 0, 196613, 30, 0, 131077, 131082, 0, 5, 196618, 0, 65541, 262152, 0, 196613, 262154, 0, 131077, 262156, 0, 196608, 262157, 0, 196609, 262158, 0, 196609, 262159, 0, 196609, 262160, 0, 196609, 262161, 0, 196609, 262162, 0, 196609, 262163, 0, 196609, 262164, 0, 196609, 262165, 0, 196609, 262166, 0, 196609, 262167, 0, 196609, 262168, 0, 196609, 262169, 0, 196609, 262170, 0, 196609, 262171, 0, 196609, 262172, 0, 196610, 393222, 0, 196613, 393224, 0, 5, 458754, 0, 196613, 458760, 0, 65541, 524296, 0, 8, 524297, 0, 65536, 524298, 0, 65536, 524299, 0, 65536, 524300, 0, 65536, 524301, 0, 65536, 524302, 0, 65536, 524303, 0, 65536, 524304, 0, 65536, 524305, 0, 65536, 524306, 0, 65536, 524307, 0, 65536, 524308, 0, 65536, 524309, 0, 9, 524310, 0, 196610, 655359, 0, 196613, 589832, 0, 131073, 589833, 0, 196619, 589834, 0, 196619, 589835, 0, 196619, 589836, 0, 196619, 589837, 0, 196619, 589838, 0, 196619, 589839, 0, 196619, 589840, 0, 196619, 589841, 0, 196619, 589842, 0, 196619, 589843, 0, 196619, 589844, 0, 3, 589845, 0, 65538, 655368, 0, 131073, 655369, 0, 3, 655370, 0, 131072, 655371, 0, 131072, 655372, 0, 131072, 655373, 0, 131072, 655374, 0, 131072, 655375, 0, 131072, 655376, 0, 131072, 655377, 0, 131072, 655378, 0, 131072, 655379, 0, 131072, 655380, 0, 65538, 655386, 0, 6, 655387, 0, 196609, 655388, 0, 196610, 720896, 0, 5, 720904, 0, 65546, 720905, 0, 65538, 720922, 0, 65541, 786432, 0, 131077, 786434, 0, 196613, 786440, 0, 65541, 786456, 0, 196608, 786457, 0, 196609, 786458, 0, 65543, 851976, 0, 65541, 917512, 0, 65541, 917517, 0, 196608, 917518, 0, 196609, 917519, 0, 196609, 917520, 0, 196609, 917521, 0, 196609, 917522, 0, 196609, 917523, 0, 196609, 917524, 0, 196609, 917525, 0, 196609, 917526, 0, 196609, 917527, 0, 196609, 917528, 0, 196609, 917529, 0, 196609, 917530, 0, 196609, 917531, 0, 196609, 917532, 0, 196610, 983048, 0, 65541, 1048576, 0, 1, 1048577, 0, 65536, 1048578, 0, 65536, 1048579, 0, 65536, 1048580, 0, 65536, 1048581, 0, 65536, 1048582, 0, 65536, 1048583, 0, 65536, 1048584, 0, 131081, 1048585, 0, 196610, 1114112, 0, 65537, 1114113, 0, 131072, 1114114, 0, 131072, 1114115, 0, 131072, 1114116, 0, 131072, 1114117, 0, 131072, 1114118, 0, 131072, 1114119, 0, 131072, 1114120, 0, 65538, 1179658, 0, 196608, 1179659, 0, 196609, 1179660, 0, 196609, 1179661, 0, 196609, 1179662, 0, 196609, 1179663, 0, 196609, 1179664, 0, 196609, 1179665, 0, 196609, 1179666, 0, 196609, 1179667, 0, 196609, 1179668, 0, 196609, 1179669, 0, 196609, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 196609, 1179673, 0, 196609, 1179674, 0, 196609, 1179675, 0, 196609, 1179676, 0, 196609, 1179677, 0, 196609, 1179678, 0, 196610 )
+
+[node name="DeadBlocks" type="Node" parent="."]
+
+[node name="DeadBlock" parent="DeadBlocks" instance=ExtResource( 3 )]
+position = Vector2( 160.154, 223.269 )
+
+[node name="DeadBlock11" parent="DeadBlocks" instance=ExtResource( 3 )]
+position = Vector2( 927.39, 414.879 )
+
+[node name="DeadBlock12" parent="DeadBlocks" instance=ExtResource( 3 )]
+position = Vector2( 925.882, 287.262 )
+
+[node name="DeadBlock13" parent="DeadBlocks" instance=ExtResource( 3 )]
+position = Vector2( 925.882, 223.262 )
+
+[node name="DeadBlock14" parent="DeadBlocks" instance=ExtResource( 3 )]
+position = Vector2( 249.087, 560.414 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 12.9706
+margin_top = 542.507
+margin_right = 209.971
+margin_bottom = 589.507
+custom_fonts/font = SubResource( 1 )
+text = "Be careful with fire"
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 241.028, 275.793 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 851973, 0, 589846, 5, 0, 655381, 5, 0, 720906, 5, 0, 786441, 5, 0, 851971, 7, 0, 851972, 8, 0, 983052, 6, 0, 983053, 7, 0, 1048585, 5, 0, 1114121, 5, 0 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 7 )]
+position = Vector2( 351.247, 220.499 )
+next_world = "res://Game/World5.tscn"
+
+[node name="Button" parent="." instance=ExtResource( 8 )]
+margin_left = 394.17
+margin_top = 297.243
+margin_right = 627.17
+margin_bottom = 336.243
+
+[node name="Demon" parent="." instance=ExtResource( 9 )]
+position = Vector2( 797.118, 551.053 )
+
+[node name="Demon2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 797.118, 358.949 )
+
+[node name="Demon3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 857.555, 292.036 )
+
+[node name="Label2" parent="." instance=ExtResource( 10 )]
+margin_left = 323.034
+margin_top = 505.672
+margin_right = 363.035
+margin_bottom = 519.672

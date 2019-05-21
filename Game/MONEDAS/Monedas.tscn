@@ -1,0 +1,38 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Game/MONEDAS/Monedas.gd" type="Script" id=1]
+[ext_resource path="res://GUI/coin/frame0000.png" type="Texture" id=2]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud0.png" type="Texture" id=3]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud1.png" type="Texture" id=4]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud2.png" type="Texture" id=5]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud3.png" type="Texture" id=6]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud4.png" type="Texture" id=7]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud5.png" type="Texture" id=8]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud6.png" type="Texture" id=9]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud7.png" type="Texture" id=10]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud8.png" type="Texture" id=11]
+[ext_resource path="res://Game/MONEDAS/Sprites/hud9.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Monedas" type="Sprite" parent="."]
+position = Vector2( 34.2948, 40.6122 )
+texture = ExtResource( 2 )
+
+[node name="0" type="AnimatedSprite" parent="Monedas"]
+position = Vector2( 65.8821, -9.02495 )
+frames = SubResource( 1 )
+
+[node name="1" type="AnimatedSprite" parent="Monedas"]
+visible = false
+position = Vector2( 133.569, -9.92743 )
+frames = SubResource( 1 )

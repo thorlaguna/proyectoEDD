@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Tiles/northcastle_trail_remix/spritesheet/northcastle_trail_remix_sheet.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.9622
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( -0.866257, 1.29948 )
+b = Vector2( -15.5521, 15.7594 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -0.414383, -0.282066 )
+b = Vector2( 15.853, 2.6551 )
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 310, 96, 32, 36 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( -1.35562, 4.06684 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( 0.225937, -18.0749 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( 0, -17.623 )
+shape = SubResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 60, 0.451874 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 232, 259, 32, 36 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+position = Vector2( -1.35562, 4.06684 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+position = Vector2( 0.225937, -18.0749 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+position = Vector2( 0, -17.623 )
+shape = SubResource( 3 )

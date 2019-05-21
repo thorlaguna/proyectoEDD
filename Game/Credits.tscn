@@ -1,0 +1,238 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Game/CompleteWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Credits/Miguel.png" type="Texture" id=2]
+[ext_resource path="res://GUI/font/Gold Box 8x8 Monospaced.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Translations/Label2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/Credits/victorBUENO.png" type="Texture" id=7]
+[ext_resource path="res://Game/Credits/Castillo.png" type="Texture" id=8]
+[ext_resource path="res://Game/Credits/isma.png" type="Texture" id=9]
+[ext_resource path="res://Game/Credits/logo.png" type="Texture" id=10]
+[ext_resource path="res://Game/Credits/coollogo_com-31202738.png" type="Texture" id=11]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 109.764, 77.103 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 109.468, 1.92368 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 122.623, 32.1012 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 17
+font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 161.856, 40.3775 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7.96524, 10 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( 2.55847, -6.53646 )
+b = Vector2( -6.13782, 9.83302 )
+
+[sub_resource type="CircleShape2D" id=8]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 207.004, 64.7347 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 133.345, 36.0555 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 21.9255, 14.0333 )
+
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( -4.0074, -26.7607 )
+b = Vector2( 22.0913, -25.9768 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 11.3826, 31.563 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 157.536, 34.1665 )
+
+[sub_resource type="CapsuleShape2D" id=15]
+radius = 12.153
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 82.4619, 47.706 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 51.2212, 49.304 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 15.8006, 57.1484 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 33.0104, 112.198 )
+next_world = "res://Game/MONEDAS/Sprites/D.tscn"
+
+[node name="Miguel" type="KinematicBody2D" parent="."]
+position = Vector2( -44.617, -25.8619 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Miguel"]
+position = Vector2( 161.053, 166.316 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Miguel"]
+position = Vector2( 158.116, 168.509 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Miguel"]
+position = Vector2( 157.851, 92.8538 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Miguel"]
+position = Vector2( 148.566, 201.957 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 462.0
+margin_right = 408.0
+margin_bottom = 599.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MIGUEL PEIRE ESPINOSA
+JAVIER CASTILLO ALGARATE
+VICTOR LAGUNA BANDRES
+ALEXIS VICENTE DE VERA
+ISMAEL VALERO GARCIA
+MATEO BERNAL TEJEDA"
+
+[node name="Label2" parent="." instance=ExtResource( 4 )]
+
+[node name="Label3" parent="." instance=ExtResource( 4 )]
+margin_left = 354.372
+margin_top = 470.823
+margin_right = 394.373
+margin_bottom = 484.823
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 19.8778, 31.9162 )
+
+[node name="Button" parent="." instance=ExtResource( 6 )]
+margin_left = 394.373
+margin_top = 560.0
+margin_right = 627.373
+margin_bottom = 599.0
+
+[node name="Victor" type="KinematicBody2D" parent="."]
+position = Vector2( -83.6609, -49.8552 )
+
+[node name="Sprite" type="Sprite" parent="Victor"]
+position = Vector2( 485.202, 221.607 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Victor"]
+position = Vector2( 482.903, 226.565 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Victor"]
+position = Vector2( 413.719, 178.62 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Victor"]
+position = Vector2( 402.637, 174.426 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Victor"]
+position = Vector2( 630.305, 262.695 )
+shape = SubResource( 8 )
+
+[node name="Catillo" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -62.9211, -42.5642 )
+
+[node name="Sprite" type="Sprite" parent="Catillo"]
+position = Vector2( 845.201, 180.93 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Catillo"]
+position = Vector2( 856.837, 179.51 )
+shape = SubResource( 9 )
+
+[node name="Isma" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Isma"]
+position = Vector2( 848.754, 330.194 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Isma"]
+position = Vector2( 850, 333.996 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Isma"]
+position = Vector2( 1003.36, 356.722 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Isma"]
+position = Vector2( 722.413, 352.531 )
+rotation = -0.825133
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Isma"]
+position = Vector2( 684.708, 330.166 )
+shape = SubResource( 13 )
+
+[node name="Mateo" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Mateo"]
+position = Vector2( 526, 374 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mateo"]
+position = Vector2( 524.498, 378.259 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mateo"]
+position = Vector2( 539.155, 355.182 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mateo"]
+position = Vector2( 441.887, 356.063 )
+shape = SubResource( 15 )
+
+[node name="Alexis" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Alexis"]
+position = Vector2( 232.104, 359.236 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alexis"]
+position = Vector2( 285.236, 356.973 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Alexis"]
+position = Vector2( 130.389, 357.8 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Alexis"]
+position = Vector2( 192.761, 366.789 )
+shape = SubResource( 18 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 1 )]
+position = Vector2( 37.0385, 285.71 )
+next_world = "res://MainMenu.tscn"
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1245184, 0, 196608, 1245185, 0, 196609, 1245186, 0, 196609, 1245187, 0, 196609, 1245188, 0, 196609, 1245189, 0, 196609, 1245190, 0, 196609, 1245191, 0, 196609, 1245192, 0, 196609, 1245193, 0, 196609, 1245194, 0, 196609, 1245195, 0, 196609, 1245196, 0, 196609, 1245197, 0, 196609, 1245198, 0, 196609, 1245199, 0, 196609, 1245200, 0, 196609, 1245201, 0, 196609, 1245202, 0, 196609, 1245203, 0, 196609, 1245204, 0, 196609, 1245205, 0, 196609, 1245206, 0, 196609, 1245207, 0, 196609, 1245208, 0, 196609, 1245209, 0, 196609, 1245210, 0, 196609, 1245211, 0, 196609, 1245212, 0, 196609, 1245213, 0, 196609, 1245214, 0, 196609, 1245215, 0, 196610 )

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://JungleDirtTileSet.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="JungleDirtTileSet" type="Sprite" parent="."]
+position = Vector2( 290, 260 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 20, 30, 50 )
+
+[node name="JungleDirtTileSet2" type="Sprite" parent="."]
+position = Vector2( 330, 260 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 30, 20, 30, 50 )
+
+[node name="JungleDirtTileSet3" type="Sprite" parent="."]
+position = Vector2( 370, 260 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 60, 20, 30, 50 )

@@ -1,0 +1,259 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://GUI/font/Gold Box 8x8 Monospaced.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Game/LEVEL.gd" type="Script" id=2]
+[ext_resource path="res://Game/Stage 2.gd" type="Script" id=3]
+[ext_resource path="res://Game/Stage 3.gd" type="Script" id=4]
+[ext_resource path="res://Game/Stage 4.gd" type="Script" id=5]
+[ext_resource path="res://Game/Stage 5.gd" type="Script" id=6]
+[ext_resource path="res://Game/Stage 6.gd" type="Script" id=7]
+[ext_resource path="res://Game/Stage 7.gd" type="Script" id=8]
+[ext_resource path="res://Game/Stage 8.gd" type="Script" id=9]
+[ext_resource path="res://Game/Stage 9.gd" type="Script" id=10]
+[ext_resource path="res://Game/Stage 10.gd" type="Script" id=11]
+[ext_resource path="res://Game/Stage 11.gd" type="Script" id=12]
+[ext_resource path="res://Game/Stage 12.gd" type="Script" id=13]
+[ext_resource path="res://Game/Stage 13.gd" type="Script" id=14]
+[ext_resource path="res://Game/Stage 14.gd" type="Script" id=15]
+[ext_resource path="res://Game/Stage 15.gd" type="Script" id=16]
+[ext_resource path="res://Game/Stage 16.gd" type="Script" id=17]
+[ext_resource path="res://Game/Stage 17.gd" type="Script" id=18]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=19]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=20]
+[ext_resource path="res://Game/Enemies/DemonFireScn.tscn" type="PackedScene" id=21]
+[ext_resource path="res://floortile.tres" type="TileSet" id=22]
+[ext_resource path="res://Game/Enemies/Dragon.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Game/Enemies/DragonFlip.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=25]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Stage 1" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 20.0
+margin_right = 466.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 1"
+script = ExtResource( 2 )
+
+[node name="Stage 2" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 20.0
+margin_right = 716.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 2"
+script = ExtResource( 3 )
+
+[node name="Stage 3" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 20.0
+margin_right = 976.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 3"
+script = ExtResource( 4 )
+
+[node name="Stage 4" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 80.0
+margin_right = 466.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 4"
+script = ExtResource( 5 )
+
+[node name="Stage 5" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 80.0
+margin_right = 716.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 5"
+script = ExtResource( 6 )
+
+[node name="Stage 6" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 80.0
+margin_right = 976.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 6"
+script = ExtResource( 7 )
+
+[node name="Stage 7" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 140.0
+margin_right = 466.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 7"
+script = ExtResource( 8 )
+
+[node name="Stage 8" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 140.0
+margin_right = 716.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 8"
+script = ExtResource( 9 )
+
+[node name="Stage 9" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 140.0
+margin_right = 976.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL 9"
+script = ExtResource( 10 )
+
+[node name="Stage 10" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 200.0
+margin_right = 466.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL10"
+align = 0
+script = ExtResource( 11 )
+
+[node name="Stage 11" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 200.0
+margin_right = 716.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL11"
+align = 0
+script = ExtResource( 12 )
+
+[node name="Stage 12" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 200.0
+margin_right = 976.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL12"
+align = 0
+script = ExtResource( 13 )
+
+[node name="Stage 13" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 255.428
+margin_right = 466.0
+margin_bottom = 293.428
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL13"
+script = ExtResource( 14 )
+
+[node name="Stage 14" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 255.428
+margin_right = 716.0
+margin_bottom = 293.428
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL14"
+script = ExtResource( 15 )
+
+[node name="Stage 15" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 255.428
+margin_right = 976.0
+margin_bottom = 293.428
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL15"
+script = ExtResource( 16 )
+
+[node name="Stage 16" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 310.0
+margin_right = 466.0
+margin_bottom = 348.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL16"
+script = ExtResource( 17 )
+
+[node name="Stage 17" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 310.0
+margin_right = 716.0
+margin_bottom = 348.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL17"
+script = ExtResource( 18 )
+
+[node name="Back to title" parent="." instance=ExtResource( 19 )]
+margin_left = 330.0
+margin_top = 450.0
+margin_right = 640.0
+margin_bottom = 489.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 20 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327680, 0, 6, 327681, 0, 196609, 327682, 0, 196609, 327683, 0, 196609, 327684, 0, 196609, 327685, 0, 7, 393216, 0, 65541, 393221, 0, 65541, 458752, 0, 65541, 458757, 0, 65541, 524288, 0, 65541, 524293, 0, 65541, 589824, 0, 65541, 589829, 0, 65541, 655360, 0, 65542, 655361, 0, 196609, 655362, 0, 196609, 655363, 0, 196609, 655364, 0, 196609, 655365, 0, 65543, 1114120, 0, 196608, 1114121, 0, 196609, 1114122, 0, 196609, 1114123, 0, 196609, 1114124, 0, 196609, 1114125, 0, 196609, 1114126, 0, 196609, 1114127, 0, 196609, 1114128, 0, 196609, 1114129, 0, 196609, 1114130, 0, 196609, 1114131, 0, 196609, 1114132, 0, 196609, 1114133, 0, 196610 )
+
+[node name="Demon" parent="." instance=ExtResource( 21 )]
+position = Vector2( 265.425, 525.713 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 22 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393217, 5, 0, 393221, 5, 0, 655361, 5, 0, 655365, 5, 0 )
+
+[node name="Dragon" parent="." instance=ExtResource( 23 )]
+position = Vector2( 38.95, 489.251 )
+
+[node name="Dragon2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 981.351, 399.001 )
+
+[node name="Player" parent="." instance=ExtResource( 25 )]
+position = Vector2( 90, 287.428 )
+[connection signal="focus_entered" from="Stage 1" to="Stage 1" method="_on_Stage_1_focus_entered"]
+[connection signal="pressed" from="Stage 1" to="Stage 1" method="_on_Stage_1_pressed"]
+[connection signal="focus_entered" from="Stage 2" to="Stage 2" method="_on_Stage_2_focus_entered"]
+[connection signal="pressed" from="Stage 2" to="Stage 2" method="_on_Stage_2_pressed"]
+[connection signal="focus_entered" from="Stage 3" to="Stage 3" method="_on_Stage_3_focus_entered"]
+[connection signal="pressed" from="Stage 3" to="Stage 3" method="_on_Stage_3_pressed"]
+[connection signal="focus_entered" from="Stage 4" to="Stage 4" method="_on_Stage_4_focus_entered"]
+[connection signal="pressed" from="Stage 4" to="Stage 4" method="_on_Stage_4_pressed"]
+[connection signal="focus_entered" from="Stage 5" to="Stage 5" method="_on_Stage_5_focus_entered"]
+[connection signal="pressed" from="Stage 5" to="Stage 5" method="_on_Stage_5_pressed"]
+[connection signal="focus_entered" from="Stage 6" to="Stage 6" method="_on_Stage_6_focus_entered"]
+[connection signal="pressed" from="Stage 6" to="Stage 6" method="_on_Stage_6_pressed"]
+[connection signal="focus_entered" from="Stage 7" to="Stage 7" method="_on_Stage_7_focus_entered"]
+[connection signal="pressed" from="Stage 7" to="Stage 7" method="_on_Stage_7_pressed"]
+[connection signal="focus_entered" from="Stage 8" to="Stage 8" method="_on_Stage_8_focus_entered"]
+[connection signal="pressed" from="Stage 8" to="Stage 8" method="_on_Stage_8_pressed"]
+[connection signal="focus_entered" from="Stage 9" to="Stage 9" method="_on_Stage_9_focus_entered"]
+[connection signal="pressed" from="Stage 9" to="Stage 9" method="_on_Stage_9_pressed"]
+[connection signal="focus_entered" from="Stage 10" to="Stage 10" method="_on_Stage_10_focus_entered"]
+[connection signal="pressed" from="Stage 10" to="Stage 10" method="_on_Stage_10_pressed"]
+[connection signal="focus_entered" from="Stage 11" to="Stage 11" method="_on_Stage_11_focus_entered"]
+[connection signal="pressed" from="Stage 11" to="Stage 11" method="_on_Stage_11_pressed"]
+[connection signal="focus_entered" from="Stage 12" to="Stage 12" method="_on_Stage_12_focus_entered"]
+[connection signal="pressed" from="Stage 12" to="Stage 12" method="_on_Stage_12_pressed"]
+[connection signal="focus_entered" from="Stage 13" to="Stage 13" method="_on_Stage_13_focus_entered"]
+[connection signal="pressed" from="Stage 13" to="Stage 13" method="_on_Stage_13_pressed"]
+[connection signal="focus_entered" from="Stage 14" to="Stage 14" method="_on_Stage_14_focus_entered"]
+[connection signal="pressed" from="Stage 14" to="Stage 14" method="_on_Stage_14_pressed"]
+[connection signal="focus_entered" from="Stage 15" to="Stage 15" method="_on_Stage_15_focus_entered"]
+[connection signal="pressed" from="Stage 15" to="Stage 15" method="_on_Stage_15_pressed"]
+[connection signal="focus_entered" from="Stage 16" to="Stage 16" method="_on_Stage_16_focus_entered"]
+[connection signal="pressed" from="Stage 16" to="Stage 16" method="_on_Stage_16_pressed"]
+[connection signal="focus_entered" from="Stage 17" to="Stage 17" method="_on_Stage_17_focus_entered"]
+[connection signal="pressed" from="Stage 17" to="Stage 17" method="_on_Stage_17_pressed"]

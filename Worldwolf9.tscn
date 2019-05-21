@@ -1,0 +1,158 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://floortile.tres" type="TileSet" id=3]
+[ext_resource path="res://NorthCastleTileSet.tres" type="TileSet" id=4]
+[ext_resource path="res://plantSet.tres" type="TileSet" id=5]
+[ext_resource path="res://Game/DeadBlockScene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/DeadBlockSceneNoSkin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/Enemies/DemonFireScn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Game/Elements/FireTrap.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Translations/Label2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Game/Enemies/DragonFlip.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Game/Enemies/Dragon.tscn" type="PackedScene" id=13]
+[ext_resource path="res://GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Game/CoinScn.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 14 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 27.2358, 88.8506 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 2 )]
+position = Vector2( 988.045, 506.329 )
+next_world = "res://Game/youwinscene.tscn"
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Tiles"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196613, 0, 0, 196614, 1, 0, 196615, 1, 0, 196616, 2, 0, 262144, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 5, 0, 262150, 5, 0, 262151, 5, 0, 262152, 4, 0, 262157, 0, 0, 262158, 1, 0, 262159, 2, 0, 262162, 0, 0, 262163, 2, 0, 262166, 0, 0, 262167, 1, 0, 262168, 2, 0, 327680, 3, 0, 327681, 5, 0, 327682, 5, 0, 327683, 5, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 4, 0, 327693, 3, 0, 327694, 5, 0, 327695, 4, 0, 327698, 3, 0, 327699, 4, 0, 327702, 3, 0, 327703, 5, 0, 327704, 4, 0, 393216, 3, 0, 393217, 5, 0, 393218, 5, 0, 393219, 5, 0, 393220, 5, 0, 393221, 5, 0, 393222, 5, 0, 393223, 5, 0, 393224, 5, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 5, 0, 393230, 5, 0, 393231, 5, 0, 393232, 1, 0, 393233, 1, 0, 393234, 5, 0, 393235, 5, 0, 393236, 1, 0, 393237, 1, 0, 393238, 5, 0, 393239, 5, 0, 393240, 5, 0, 393241, 1, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 2, 0, 458752, 6, 0, 458753, 7, 0, 458754, 7, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 7, 0, 458759, 7, 0, 458760, 7, 0, 458761, 7, 0, 458762, 7, 0, 458763, 7, 0, 458764, 7, 0, 458765, 7, 0, 458766, 7, 0, 458767, 7, 0, 458768, 7, 0, 458769, 7, 0, 458770, 7, 0, 458771, 7, 0, 458772, 7, 0, 458773, 7, 0, 458774, 7, 0, 458775, 7, 0, 458776, 7, 0, 458777, 7, 0, 458778, 7, 0, 458779, 7, 0, 458780, 7, 0, 458781, 8, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Tiles"]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 589849, 11, 0, 655381, 536870921, 0, 655382, 9, 0, 655389, 3, 0, 655390, 3, 0, 655391, 3, 0, 720900, 3, 0, 720903, 3, 0, 720906, 3, 0, 720909, 3, 0, 720916, 536870921, 0, 720919, 9, 0, 720924, 3, 0, 720925, 4, 0, 720926, 4, 0, 720927, 4, 0, 786434, 3, 0, 786448, 3, 0, 786449, 3, 0, 786450, 3, 0, 786451, 3, 0, 786453, 4, 0, 786454, 4, 0, 786456, 3, 0, 786457, 3, 0, 786458, 3, 0, 786459, 3, 0, 786460, 4, 0, 786461, 4, 0, 786462, 4, 0, 786463, 4, 0, 851970, 4, 0, 851984, 1073741828, 0, 851985, 1073741828, 0, 851986, 1073741828, 0, 851987, 1073741828, 0, 851988, 1073741828, 0, 851989, 1073741828, 0, 851990, 1073741828, 0, 851991, 1073741828, 0, 851992, 1073741828, 0, 851993, 1073741828, 0, 851994, 1073741828, 0, 851995, 1073741828, 0, 851996, 1073741828, 0, 851997, 1073741828, 0, 851998, 1073741828, 0, 851999, 1073741828, 0, 917506, 1073741827, 0, 917507, 1073741827, 0, 917508, 1073741827, 0, 917509, 1073741827, 0, 917510, 1073741827, 0, 917511, 1073741827, 0, 917512, 1073741827, 0, 917513, 1073741827, 0, 917514, 1073741827, 0, 917515, 1073741827, 0, 917516, 1073741827, 0, 917517, 1073741827, 0, 917518, 1073741827, 0, 917519, 1073741827, 0, 917520, 1073741827, 0, 917521, 1073741827, 0, 917522, 1073741827, 0, 917523, 1073741827, 0, 917524, 1073741827, 0, 917525, 1073741827, 0, 917526, 1073741827, 0, 917527, 1073741827, 0, 917528, 1073741827, 0, 917529, 1073741827, 0, 917530, 1073741827, 0, 917531, 1073741827, 0, 917532, 1073741827, 0, 917533, 1073741827, 0, 917534, 1073741827, 0, 917535, 1073741827, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Tiles"]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1114118, 1, 0, 1114119, 1, 0, 1114124, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114138, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1179648, 1, 0, 1179649, 1, 0, 1179650, 1, 0, 1179653, 1, 0, 1179656, 1, 0, 1179659, 1, 0, 1179661, 1, 0, 1179663, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179672, 1, 0 )
+
+[node name="DeadBlocks" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="DeadBlock" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 543.526, 165.364 )
+
+[node name="DeadBlock3" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 479.771, 419.478 )
+
+[node name="DeadBlock6" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 288.928, 419.478 )
+
+[node name="DeadBlock7" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 224.893, 419.478 )
+
+[node name="DeadBlock8" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 161.121, 419.741 )
+
+[node name="DeadBlock9" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 128.181, 420.005 )
+
+[node name="DeadBlock4" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 415.717, 419.424 )
+
+[node name="DeadBlock5" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 352.082, 419.424 )
+
+[node name="DeadBlock2" parent="DeadBlocks" instance=ExtResource( 6 )]
+position = Vector2( 672.893, 164.037 )
+
+[node name="DeadBlock10" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 128.34, 629.396 )
+
+[node name="DeadBlock11" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 321.73, 629.396 )
+
+[node name="DeadBlock12" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 479.958, 629.396 )
+
+[node name="DeadBlock13" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 543.249, 629.396 )
+
+[node name="DeadBlock14" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 740.155, 629.396 )
+
+[node name="DeadBlock15" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 833.333, 629.396 )
+
+[node name="DeadBlock16" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 896.624, 627.637 )
+
+[node name="DeadBlock17" parent="DeadBlocks" instance=ExtResource( 7 )]
+position = Vector2( 959.916, 629.396 )
+
+[node name="Button" parent="." instance=ExtResource( 8 )]
+margin_left = 790.0
+margin_right = 1023.0
+
+[node name="Demon" parent="." instance=ExtResource( 9 )]
+position = Vector2( 40, 550 )
+
+[node name="Area2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 300.73, 180 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 330, 180 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 360, 180 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 390, 180 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 409.13, 180 )
+
+[node name="Area2D6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 370.73, 180 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 349.13, 180 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 319.86, 180 )
+
+[node name="Label2" parent="." instance=ExtResource( 11 )]
+margin_left = 220.0
+margin_top = 580.0
+margin_right = 260.0
+margin_bottom = 594.0
+
+[node name="Dragon" parent="." instance=ExtResource( 12 )]
+position = Vector2( 980, 100 )
+
+[node name="Dragon2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 30, 280 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 936.476
+margin_top = 482.438
+margin_right = 1003.48
+margin_bottom = 515.438
+custom_fonts/font = SubResource( 1 )
+text = "ISABELL"
+
+[node name="Area2D9" parent="." instance=ExtResource( 15 )]
+position = Vector2( 288.327, 277.779 )

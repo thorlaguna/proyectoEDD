@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://plantSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/DeadBlockSceneNoSkin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game/Enemies/DemonFireScn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Translations/Label2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Enemies/DragonFlip.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/CoinScn.tscn" type="PackedScene" id=9]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196609, 8, 0, 196614, 8, 0, 196619, 8, 0, 262144, 9, 0, 327681, 0, 0, 327684, 0, 0, 327687, 0, 0, 327690, 0, 0, 327693, 0, 0, 327699, 7, 0, 393217, 0, 0, 393220, 0, 0, 393223, 0, 0, 393226, 0, 0, 393229, 0, 0, 393235, 7, 0, 393238, 1, 0, 393239, 1, 0, 393240, 1, 0, 393241, 1, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 1, 0, 458753, 0, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458762, 0, 0, 458765, 0, 0, 458774, 0, 0, 458777, 0, 0, 458780, 0, 0, 524289, 0, 0, 524292, 0, 0, 524295, 0, 0, 524298, 0, 0, 524301, 0, 0, 524310, 0, 0, 524313, 0, 0, 524316, 0, 0, 589824, 1, 0, 589825, 0, 0, 589828, 0, 0, 589831, 0, 0, 589834, 0, 0, 589837, 0, 0, 589846, 0, 0, 589849, 0, 0, 589852, 0, 0, 655361, 0, 0, 655364, 0, 0, 655367, 0, 0, 655370, 0, 0, 655373, 0, 0, 655382, 0, 0, 655385, 0, 0, 655388, 0, 0, 720897, 0, 0, 720900, 0, 0, 720903, 0, 0, 720906, 0, 0, 720909, 0, 0, 720918, 0, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786436, 0, 0, 786439, 0, 0, 786442, 0, 0, 786445, 0, 0, 786451, 7, 0, 786454, 0, 0, 786457, 0, 0, 786460, 0, 0, 851969, 0, 0, 851972, 0, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 0, 0, 851981, 0, 0, 851987, 7, 0, 851990, 0, 0, 851993, 0, 0, 851996, 0, 0, 917505, 0, 0, 917508, 0, 0, 917511, 0, 0, 917514, 0, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917523, 7, 0, 917526, 0, 0, 917529, 0, 0, 917532, 0, 0, 983041, 0, 0, 983044, 0, 0, 983047, 0, 0, 983050, 0, 0, 983053, 0, 0, 983059, 7, 0, 983062, 0, 0, 983065, 0, 0, 983068, 0, 0, 1048577, 0, 0, 1048580, 0, 0, 1048583, 0, 0, 1048586, 0, 0, 1048589, 0, 0, 1048595, 7, 0, 1048598, 0, 0, 1048601, 0, 0, 1048604, 0, 0, 1114113, 0, 0, 1114116, 0, 0, 1114119, 0, 0, 1114122, 0, 0, 1114125, 0, 0, 1114131, 7, 0, 1114134, 0, 0, 1114137, 0, 0, 1114140, 0, 0, 1179649, 0, 0, 1179652, 0, 0, 1179655, 0, 0, 1179658, 0, 0, 1179661, 0, 0, 1179667, 7, 0, 1179670, 0, 0, 1179673, 0, 0, 1179676, 0, 0, 1245185, 0, 0, 1245188, 0, 0, 1245191, 0, 0, 1245194, 0, 0, 1245197, 0, 0, 1245206, 0, 0, 1245209, 0, 0, 1245212, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 41.6275, 93.3853 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 243.907, 192.104 )
+next_world = "res://Worldwolf7.tscn"
+
+[node name="DeadBlocks" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="DeadBlock10" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 597.903, 628.396 )
+
+[node name="DeadBlock11" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 659.953, 628.396 )
+
+[node name="DeadBlock12" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 722.003, 628.396 )
+
+[node name="DeadBlock13" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 784.053, 627.288 )
+
+[node name="DeadBlock14" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 846.103, 628.396 )
+
+[node name="DeadBlock15" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 910.369, 627.288 )
+
+[node name="DeadBlock16" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 974.635, 628.396 )
+
+[node name="DeadBlock17" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 1038.9, 628.396 )
+
+[node name="DeadBlock" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 30.5897, 627.288 )
+
+[node name="DeadBlock2" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 93.7476, 628.396 )
+
+[node name="DeadBlock3" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 156.906, 628.396 )
+
+[node name="DeadBlock4" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 220.063, 627.288 )
+
+[node name="DeadBlock5" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 282.113, 628.396 )
+
+[node name="DeadBlock6" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 345.271, 627.288 )
+
+[node name="DeadBlock7" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 408.429, 627.288 )
+
+[node name="DeadBlock8" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 471.587, 628.396 )
+
+[node name="DeadBlock9" parent="DeadBlocks" instance=ExtResource( 4 )]
+position = Vector2( 534.745, 628.396 )
+
+[node name="Button" parent="." instance=ExtResource( 5 )]
+margin_left = 790.0
+margin_right = 1023.0
+
+[node name="Demon" parent="." instance=ExtResource( 6 )]
+position = Vector2( 770, 170 )
+
+[node name="Demon2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 860, 330 )
+
+[node name="Demon3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 408.429, 425 )
+
+[node name="Label2" parent="." instance=ExtResource( 7 )]
+margin_left = 869.505
+margin_top = 39.0
+margin_right = 909.506
+margin_bottom = 53.0
+
+[node name="Dragon" parent="." instance=ExtResource( 8 )]
+position = Vector2( 550, 210 )
+
+[node name="Area2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 622.978, 319.005 )

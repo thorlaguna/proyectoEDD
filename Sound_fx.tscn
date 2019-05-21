@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Music/Sound/Sound_Effects/Jump.wav" type="AudioStream" id=1]
+[ext_resource path="res://Music/Sound/Sound_Effects/Shoot.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music/Sound/Sound_Effects/Hit.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music/Sound/Sound_Effects/Coin_collect.wav" type="AudioStream" id=4]
+[ext_resource path="res://Music/Sound/Sound_Effects/Die.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music/Sound/Sound_Effects/New_Game.wav" type="AudioStream" id=6]
+[ext_resource path="res://Music/Sound/Sound_Effects/exit.wav" type="AudioStream" id=7]
+[ext_resource path="res://Music/Sound/Sound_Effects/other.wav" type="AudioStream" id=8]
+[ext_resource path="res://Music/Sound/Sound_Effects/PowerUp03.wav" type="AudioStream" id=9]
+[ext_resource path="res://Music/Sound/Sound_Effects/game_over.wav" type="AudioStream" id=10]
+
+[node name="Node" type="Node"]
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="coin_collect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="new_game" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="exit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="others" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="portal_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="game_over" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )

@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=2]
+[ext_resource path="res://floortile.tres" type="TileSet" id=3]
+[ext_resource path="res://Game/CoinScn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/DeadBlockScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game/Elements/ButtonBackToTitle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/CompleteWorld.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Enemies/Dragon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/Enemies/DragonFlip.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Translations/Label2.tscn" type="PackedScene" id=10]
+
+[node name="Node" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 21.007, 543.724 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 524318, 0, 196613, 1179648, 0, 196608, 1179649, 0, 196610 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 196610, 1, 0, 327680, 1, 0, 393233, 1, 0, 393237, 1, 0, 393241, 1, 0, 393244, 1, 0, 458753, 1, 0, 524292, 1, 0, 589831, 1, 0, 589834, 1, 0, 589837, 1, 0, 720925, 1, 0, 851968, 1, 0, 851969, 1, 0, 917532, 1, 0, 1048582, 1, 0, 1048585, 1, 0, 1048588, 1, 0, 1048591, 1, 0, 1048594, 1, 0, 1048597, 1, 0, 1048600, 1, 0, 1048603, 1, 0, 1114116, 1, 0 )
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+position = Vector2( 14.7328, 399.015 )
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 47.8818, 399.015 )
+
+[node name="DeadBlocks" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="DeadBlock" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 128, 609 )
+
+[node name="DeadBlock5" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 609 )
+
+[node name="DeadBlock12" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 609 )
+
+[node name="DeadBlock13" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 896, 609 )
+
+[node name="DeadBlock2" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 609 )
+
+[node name="DeadBlock6" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 609 )
+
+[node name="DeadBlock9" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 609 )
+
+[node name="DeadBlock14" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 960, 609 )
+
+[node name="DeadBlock3" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 256, 609 )
+
+[node name="DeadBlock8" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 609 )
+
+[node name="DeadBlock11" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 609 )
+
+[node name="DeadBlock16" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 995, 609 )
+
+[node name="DeadBlock4" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 609 )
+
+[node name="DeadBlock7" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 609 )
+
+[node name="DeadBlock10" parent="DeadBlocks" instance=ExtResource( 5 )]
+position = Vector2( 832, 609 )
+
+[node name="Button" parent="." instance=ExtResource( 6 )]
+margin_left = 795.82
+margin_top = -1.36037
+margin_right = 1028.82
+margin_bottom = 37.6396
+
+[node name="World" parent="." instance=ExtResource( 7 )]
+position = Vector2( 228.543, 27.2075 )
+next_world = "res://Worldwolf.tscn"
+
+[node name="Dragon" parent="." instance=ExtResource( 8 )]
+position = Vector2( 338.598, 142.159 )
+
+[node name="Dragon2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 997.7, 398.046 )
+
+[node name="Label2" parent="." instance=ExtResource( 10 )]
+margin_left = 155.508
+margin_top = 458.179
+margin_right = 195.509
+margin_bottom = 472.179
